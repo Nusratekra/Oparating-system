@@ -1,5 +1,5 @@
-queue = list(map(int, input("Enter request queue: ").split()))  # e.g., 53 37 14 0 65 67 98 122 124 183
-disk_size = int(input("Enter disk size: "))                     # e.g., 200
+queue = list(map(int, input("Enter request queue: ").split()))  
+disk_size = int(input("Enter disk size: "))                     
 direction = input("Enter direction (increasing/decreasing): ").lower()
 
 head = queue[0]
