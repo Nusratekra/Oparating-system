@@ -43,7 +43,7 @@ if direction == "decreasing":
             print(f"{head} -> {r} = {move}   total = {seek_count}")
         seek_sequence.append(r)
         head = r
-else:  # increasing
+else:  
     for r in right:
         if head != r:
             move = abs(head - r)
