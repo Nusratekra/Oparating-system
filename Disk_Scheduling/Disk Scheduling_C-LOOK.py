@@ -33,18 +33,18 @@ if direction == 'increasing':
     if left:
         jump_distance = abs(head - left[0])
         seek_count += jump_distance
+        print(f"{head} -> {left[0]} = {jump_distance}   total = {seek_count}")
         head = left[0]
-        print(f"{head} -> {jump_distance}, total = {seek_count}")
+        seek_sequence.append(head)
 
-        for r in left:
-            if r != left[0]:
-                move = abs(head - r)
-                seek_count += move
-                print(f"{head} -> {r} = {move}   total = {seek_count}")
-                seek_sequence.append(r)
-                head = r
+        for r in left[1:]:
+            move = abs(head - r)
+            seek_count += move
+            print(f"{head} -> {r} = {move}   total = {seek_count}")
+            seek_sequence.append(r)
+            head = r
 
-else:
+else: 
     for r in reversed(left):
         move = abs(head - r)
         seek_count += move
@@ -55,8 +55,9 @@ else:
     if right:
         jump_distance = abs(head - right[-1])
         seek_count += jump_distance
+        print(f"{head} -> {right[-1]} = {jump_distance}   total = {seek_count}")
         head = right[-1]
-        print(f"{head} -> {jump_distance}, total = {seek_count}")
+        seek_sequence.append(head)
 
         for r in reversed(right[:-1]):
             move = abs(head - r)
