@@ -1,5 +1,4 @@
-queue = list(map(int, input("Enter request queue: ").split()))  
-disk_size = int(input("Enter disk size: "))                    
+queue = list(map(int, input("Enter request queue: ").split()))                
 direction = input("Enter direction (increasing/decreasing): ").lower()  
 
 head = queue[0]       
@@ -19,12 +18,7 @@ for r in requests:
 left.sort()
 right.sort()
 
-if direction == "decreasing":
-    if left == [] or left[0] != 0:
-        left.insert(0, 0)
-else:
-    if right == [] or right[-1] != disk_size - 1:
-        right.append(disk_size - 1)
+
 
 print("\nHead Movement:")
 
